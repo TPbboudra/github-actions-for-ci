@@ -4,12 +4,12 @@ jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
     steps:
-      - name: Label when labelWhenApproved
-        uses: pullreminders/label-when-approved-action@master
-        env:
-          APPOVALS: "1"
-          GITHUB_TOKEN: $${{secrets.GITHUB_TOKEN}}
-          ADD_LABEL: "approved"
-          REMOVE_LABEL: "awaiting%20review"
+    - name: Label when Approved
+      uses: pullreminders/label-when-approved-action@master
+      env:
+        APPOVALS: "1"
+        GITHUB_TOKEN: $${{secrets.GITHUB_TOKEN}}
+        ADD_LABEL: "approved"
+        REMOVE_LABEL: "awaiting%20review"
 
     
