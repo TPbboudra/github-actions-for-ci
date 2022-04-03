@@ -1,4 +1,4 @@
-name: Team awesome's approval workflow
+name: Team Drone's approval workflow
 on: pull_request_review
 jobs:
   labelWhenApproved:
@@ -7,9 +7,7 @@ jobs:
     - name: Label when Approved
       uses: pullreminders/label-when-approved-action@master
       env:
-        APPOVALS: "1"
+        APPROVALS: "1"
         GITHUB_TOKEN: $${{secrets.GITHUB_TOKEN}}
         ADD_LABEL: "approved"
         REMOVE_LABEL: "awaiting%20review"
-
-    
